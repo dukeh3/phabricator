@@ -14,6 +14,7 @@ final class ManiphestTask extends ManiphestDAO
     PhabricatorApplicationTransactionInterface,
     PhabricatorProjectInterface,
     PhabricatorSpacesInterface,
+	PhabricatorBlockerableInterface,
     PhabricatorConduitResultInterface,
     PhabricatorFulltextInterface,
     DoorkeeperBridgedObjectInterface {
@@ -41,6 +42,7 @@ final class ManiphestTask extends ManiphestDAO
   protected $properties = array();
   protected $points;
 
+  private $blockerPHIDs = self::ATTACHABLE;
   private $subscriberPHIDs = self::ATTACHABLE;
   private $groupByProjectPHID = self::ATTACHABLE;
   private $customFields = self::ATTACHABLE;
@@ -64,7 +66,8 @@ final class ManiphestTask extends ManiphestDAO
       ->setEditPolicy($edit_policy)
       ->setSpacePHID($actor->getDefaultSpacePHID())
       ->attachProjectPHIDs(array())
-      ->attachSubscriberPHIDs(array());
+      ->attachSubscriberPHIDs(array())
+      ->attachBlockerPHIDs(array());
   }
 
   protected function getConfiguration() {

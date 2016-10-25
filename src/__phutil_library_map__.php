@@ -3709,6 +3709,20 @@ phutil_register_library_map(array(
     'PhabricatorSubscriptionsTransactionController' => 'applications/subscriptions/controller/PhabricatorSubscriptionsTransactionController.php',
     'PhabricatorSubscriptionsUIEventListener' => 'applications/subscriptions/events/PhabricatorSubscriptionsUIEventListener.php',
     'PhabricatorSubscriptionsUnsubscribeEmailCommand' => 'applications/subscriptions/command/PhabricatorSubscriptionsUnsubscribeEmailCommand.php',
+	
+	
+	//blockers
+     'PhabricatorBlockerableInterface' => 'applications/blockers/interface/PhabricatorBlockerableInterface.php',
+    'PhabricatorUnblockedFromObjectEdgeType' => 'applications/transactions/edges/PhabricatorUnblockedFromObjectEdgeType.php',    
+    'PhabricatorBlockersEditField' => 'applications/transactions/editfield/PhabricatorBlockersEditField.php',
+    'PhabricatorBlockersQuery' => 'applications/blockers/query/PhabricatorBlockersQuery.php',
+    'PhabricatorBlockersApplication' => 'applications/blockers/application/PhabricatorBlockersApplication.php',
+    'PhabricatorBlockersEditEngineExtension' => 'applications/blockers/engineextension/PhabricatorBlockersEditEngineExtension.php',
+    'PhabricatorBlockersEditor' => 'applications/blockers/editor/PhabricatorBlockersEditor.php',
+	
+
+	
+	
     'PhabricatorSupportApplication' => 'applications/support/application/PhabricatorSupportApplication.php',
     'PhabricatorSyntaxHighlighter' => 'infrastructure/markup/PhabricatorSyntaxHighlighter.php',
     'PhabricatorSyntaxHighlightingConfigOptions' => 'applications/config/option/PhabricatorSyntaxHighlightingConfigOptions.php',
@@ -8733,6 +8747,15 @@ phutil_register_library_map(array(
     'PhabricatorSubscriptionsTransactionController' => 'PhabricatorController',
     'PhabricatorSubscriptionsUIEventListener' => 'PhabricatorEventListener',
     'PhabricatorSubscriptionsUnsubscribeEmailCommand' => 'MetaMTAEmailTransactionCommand',
+	
+	
+	//blocks
+     'PhabricatorUnblockedFromObjectEdgeType' => 'PhabricatorEdgeType',
+     'PhabricatorBlockersApplication' => 'PhabricatorApplication',
+     'PhabricatorBlockersEditEngineExtension' => 'PhabricatorEditEngineExtension',
+     'PhabricatorBlockersEditField' => 'PhabricatorTokenizerEditField',
+	
+	
     'PhabricatorSupportApplication' => 'PhabricatorApplication',
     'PhabricatorSyntaxHighlighter' => 'Phobject',
     'PhabricatorSyntaxHighlightingConfigOptions' => 'PhabricatorApplicationConfigOptions',

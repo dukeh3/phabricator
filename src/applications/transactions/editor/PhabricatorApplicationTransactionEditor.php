@@ -261,6 +261,10 @@ abstract class PhabricatorApplicationTransactionEditor
 
     $types[] = PhabricatorTransactions::TYPE_CREATE;
 
+     if ($this->object instanceof PhabricatorBlockableInterface) {
+      $types[] = PhabricatorTransactions::TYPE_BLOCKERS;
+    }
+    
     if ($this->object instanceof PhabricatorSubscribableInterface) {
       $types[] = PhabricatorTransactions::TYPE_SUBSCRIBERS;
     }
